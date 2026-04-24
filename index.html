@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal OS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="auth-gate" class="hidden">
+    <div class="auth-modal">
+      <h2>Personal OS</h2>
+      <p class="subtitle">Enter your password to continue</p>
+      <input type="password" id="auth-input" placeholder="Password" autocomplete="current-password">
+      <button id="auth-submit">Unlock</button>
+      <p id="auth-error" class="error hidden">Incorrect password</p>
+    </div>
+  </div>
+
+  <div id="app" class="hidden">
+    <aside id="sidebar"></aside>
+    <main id="content"></main>
+  </div>
+
+  <!-- app.js is the only entry point. It dynamically imports pages and components. -->
+  <!-- lib/db.js is Node.js only — never loaded in the browser. -->
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
